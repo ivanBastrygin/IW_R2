@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+</head>
+<body>
+   <div class="container">
+<input id="input" type="text" placeholder="Введите IP-адрес">
+<button onclick="check()" type="button">Проверить</buttton>
+<p id="p"></p>
+</div>
+
+<style type="text/css">
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#input{
+width: 190px;
+}
+#button{
+margin-top: 10px;
+width: 120px;
+height: 30px;
+}
+</style>
+
+<script>
+var input=document.getElementById('input');
+
+var p=document.getElementById('p');
+
+ function check () {
+if(/^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]|[1-9][0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]|[1-9][0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]|[1-9][0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]|[1-9][0-9])$/.test(input.value)){
+alert("Корректный IP-адрес");
+}
+else{
+alert("Не корректный IP-адрес");
+}
+}
+</script>
+</body>
+</html>
